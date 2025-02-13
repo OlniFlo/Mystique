@@ -1,0 +1,112 @@
+.music-list-container
+{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    color: #333;
+
+    .music-header
+    {
+        text-align: center;
+        margin-bottom: 2em;
+
+        .music-title
+        {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+    }
+
+    .music-main
+    {
+        .music-items
+        {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+
+            .music-item
+            {
+                background-color: #fff;
+                border: 0.0625em solid #e5e7eb;
+                border-radius: 0.5em;
+                padding: 1.5em;
+                flex: 1 1 calc(33.333% - 1em);
+                box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover
+                {
+                    transform: translateY(-0.3125em);
+                    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.15);
+                }
+
+                .track-header
+                {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0.5em;
+
+                    .track-number
+                    {
+                        font-size: 1.2em;
+                        font-weight: bold;
+                        margin-right: 0.5em;
+                        color: #3b82f6;
+                    }
+
+                    .track-title
+                    {
+                        font-size: 1.75em;
+                        margin: 0;
+                        color: #111827;
+                    }
+                }
+
+                .track-genre
+                {
+                    font-size: 1em;
+                    font-style: italic;
+                    color: #6b7280;
+                    margin-bottom: 1em;
+                }
+
+                .track-audio
+                {
+                    margin-bottom: 1em;
+
+                    .audio-player
+                    {
+                        width: 100%;
+                        outline: none;
+                    }
+                }
+
+                .track-download
+                {
+                    text-align: right;
+
+                    .download-link
+                    {
+                        display: inline-block;
+                        background-color: #3b82f6;
+                        color: #fff;
+                        padding: 0.5em 1em;
+                        border-radius: 0.25em;
+                        text-decoration: none;
+                        font-weight: 600;
+                        transition: background-color 0.3s ease;
+
+                        &:hover
+                        {
+                            background-color: #2563eb;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

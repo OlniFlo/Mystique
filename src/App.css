@@ -1,0 +1,54 @@
+.App
+{
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #444;
+
+  .app-header
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f2937;
+    padding: 1em;
+    border-bottom: 0.0625em solid #374151;
+   z-index: 1000;
+
+    .app-nav
+    {
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+      align-items: center;
+
+      .nav-link
+      {
+        text-decoration: none;
+        color: #d1d5db;
+        padding: 0.5em 1em;
+        border-radius: 0.25em;
+        transition: background-color 0.3s ease;
+
+        &:hover
+        {
+          background-color: #374151;
+        }
+
+        &.active
+        {
+          background-color: #3b82f6;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .app-main
+  {
+    margin-top: 4em;
+    padding: 1em;
+    background-color: #f3f4f6;
+    min-height: 100vh;
+  }
+}
