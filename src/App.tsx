@@ -25,7 +25,7 @@ function App()
 
                 <main className={"app-main"}>
                     <Routes>
-                        <Route path={"/"} element={<MusicListApp />} />
+                        <Route path={"/Mystique"} element={<MusicListApp />} />
                     </Routes>
                 </main>
             </div>
