@@ -39,17 +39,28 @@ function App()
         };
     }, []);
 
+    const clearCacheAndReload = async () => {
+        if ('caches' in window) {
+            const cacheNames = await caches.keys();
+            await Promise.all(cacheNames.map(cache => caches.delete(cache)));
+        }
+        window.location.reload();
+    };
+
     return (
         <Router basename={"/Mystique/"}>
             <div className={"App"}>
                 <header className={"app-header"}>
+                    <button onClick={clearCacheAndReload} className={"refresh-button"} title={"Rafraichir la page"}>
+                        <span className={"refresh-icon"}></span>
+                    </button>
                     <nav className={"app-nav"} ref={menuRef} onMouseEnter={handleMouseEnter}
                          onMouseLeave={handleMouseLeave}>
                         <button
                             className={`menu-button ${isMenuOpen ? "open" : ""}`}
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >
-                            <span className="dropdown-arrow"></span>
+                            <span className={"dropdown-arrow"}></span>
                             Menu
                         </button>
 

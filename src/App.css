@@ -22,6 +22,40 @@
   display: flex;
   justify-content: center;
 
+  .refresh-button
+  {
+    position: absolute;
+    left: 3em;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+
+  .refresh-icon
+  {
+    width: 1em;
+    height: 1em;
+    transition: transform 0.3s ease;
+    filter: invert(1);
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVxJREFUSEu1lYttAjEQRJdOQiUhlQQqSVIJoRJCJZBOwjt5rfHnrDURK518ulvP7Ge83tiTbfNkfIsQ7M3sxcxezWxnZrf7+mNmv2nlfdVGBIAeE+gIA8K3RNz4rREAfk3eAJwkWv6RCet7Wt3ns2YYEZwTcLNJQCChhB/p29d9LfxrAiIb1nSlVuwjIDI5KEZNoE6zAiNyMoFk65uVgFRp6rBpA1YVBU1fKqEEgEOCfadUH80i90IJUA1RYE0tg0zeC6IniyIDJeBfdgqC4+byzn3oZUCDcJgxxEH0agu2ErhTbtAEgx7MInslcJk1hyVI1BWJEuhhyToOgmv9ee/KVHX8qEyROfNpUVDdgzoKjjxEM0aQPHnc9Iadn2iAI/2gd0TdLWuPoJ6QfsFcJDIf2T6ui7o3Wl2pwcyFU0zQKIH3xOvqVybfyYqMsNF9EbqTZ5rc+EYu/X8R/AFvxlEZSDQTmAAAAABJRU5ErkJggg==");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0.1em;
+    border-radius: 0.5em;
+  }
+
+  .refresh-button:hover .refresh-icon
+  {
+    transform: rotate(360deg);
+  }
+
   .logo-container
   {
     position: absolute;
