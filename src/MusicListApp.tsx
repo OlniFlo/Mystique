@@ -13,6 +13,8 @@ const MusicListApp: React.FC = () => {
     const [tracks, setTracks] = useState<Track[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(null);
+    const [validAudios, setValidAudios] = useState<Set<string>>(new Set());
+    const [validPdfs, setValidPdfs] = useState<Set<string>>(new Set());
 
     // Utilisation d'une Map pour stocker les références des audios.
     const audioRefs = useRef<Map<number, HTMLAudioElement>>(new Map());
@@ -25,6 +27,28 @@ const MusicListApp: React.FC = () => {
                 return response.json();
             })
             .then(async (data: Track[]) => {
+                const audioChecks = data.map(track =>
+                    track.audio ? checkFileExists(`/Mystique/audios/${track.audio}`) : Promise.resolve(false)
+                );
+                const pdfChecks = data.map(track =>
+                    track.pdf ? checkFileExists(`/Mystique/partitions/${track.pdf}`) : Promise.resolve(false)
+                );
+
+                const audioResults = await Promise.all(audioChecks);
+                const pdfResults = await Promise.all(pdfChecks);
+
+                const validAudiosSet = new Set<string>(
+                    data.filter((_, index) => audioResults[index] && data[index].audio)
+                        .map(track => track.audio as string)
+                );
+
+                const validPdfsSet = new Set<string>(
+                    data.filter((_, index) => pdfResults[index] && data[index].pdf)
+                        .map(track => track.pdf as string)
+                );
+
+                setValidAudios(validAudiosSet);
+                setValidPdfs(validPdfsSet);
                 setTracks(data);
                 setLoading(false);
             })
@@ -33,6 +57,32 @@ const MusicListApp: React.FC = () => {
                 setLoading(false);
             });
     }, []);
+
+    /**
+     * Vérifie si un fichier existe réellement en testant sa taille.
+     * @param filePath - Chemin du fichier.
+     * @returns {Promise<boolean>} - Retourne true si le fichier existe et a une taille correcte, sinon false.
+     */
+    const checkFileExists = async (filePath: string): Promise<boolean> => {
+        try
+        {
+            const response = await fetch(filePath, {
+                method: "HEAD",
+                cache: "no-store",
+            });
+
+            const contentLength = response.headers.get("Content-Length");
+
+            if ((response.status === 404 || !response.ok) || (!contentLength || parseInt(contentLength, 10) === 0))
+                return false;
+
+            return true;
+        }
+        catch (error)
+        {
+            return false;
+        }
+    };
 
     /**
      * Gère la lecture d'un audio, en stoppant l'audio en cours si nécessaire.
@@ -70,7 +120,7 @@ const MusicListApp: React.FC = () => {
 
                                 {track.genre && <p className={"track-genre"}>Genre : {track.genre}</p>}
 
-                                {track.audio && (
+                                {track.audio && validAudios.has(track.audio) && (
                                     <div className={"track-audio"}>
                                         <audio
                                             ref={(el) => {
@@ -86,11 +136,12 @@ const MusicListApp: React.FC = () => {
                                     </div>
                                 )}
 
-                                {track.pdf && (
+                                {track.pdf && validPdfs.has(track.pdf) && (
                                     <div className={"track-download"}>
-                                        <a href={`/Mystique/partitions/${track.pdf}`} download
+                                        <a href={`/Mystique/partitions/${track.pdf}`} target={"_blank"}
+                                           rel={"noopener noreferrer"}
                                            className={"download-link"}>
-                                            Télécharger la partition
+                                            Voir la partition
                                         </a>
                                     </div>
                                 )}
