@@ -14,7 +14,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 1em;
-            opacity: 0.90;
+            opacity: 0.80;
 
             .music-item
             {
