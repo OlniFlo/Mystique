@@ -34,6 +34,42 @@
     "audio": "Maneskin_Supermodel _ Live.mp3",
     "pdf": "Supermodel_Maneskin.pdf",
     "genre": "Rock Classique"
+  },
+      {
+    "title": "Bad Girls",
+    "audio": "Bad_Girls.mp3",
+    "pdf": "Bad_Girls.pdf",
+    "genre": "Funk Rock"
+  },
+       {
+    "title": "Treasure",
+    "audio": "Treasure.mp3",
+    "pdf": "Treasure.pdf",
+    "genre": "Pop"
+  },
+     {
+    "title": "Back to Black",
+    "audio": "Back_to_black.mp3",
+    "pdf": "Back_to_black.pdf",
+    "genre": "Pop"
+  },
+       {
+    "title": "I Gotta Feeling",
+    "audio": "I Gotta Feeling.mp3",
+    "pdf": "Gotta_feeling.pdf",
+    "genre": "Pop Festif"
+  },
+         {
+    "title": "S&M - Rihanna ",
+    "audio": "S&M.mp3",
+    "pdf": "SM_Rihanna.pdf",
+    "genre": "Pop Festif"
+  },
+         {
+    "title": "Get Lucky",
+    "audio": "Get Lucky_JK.mp3",
+    "pdf": "Get_Lucky.pdf",
+    "genre": "Pop Festif"
   }
   
 ]
