@@ -14,7 +14,7 @@ const MusicListApp: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        fetch('./public/musicList.json')
+        fetch('./musicList.json')
             .then((response) => {
                 if (!response.ok)
                     throw new Error("Erreur lors du chargement du fichier JSON");
@@ -49,12 +49,12 @@ const MusicListApp: React.FC = () => {
                             <p className={"track-genre"}>Genre : {track.genre}</p>
                             <div className={"track-audio"}>
                                 <audio controls className={"audio-player"}>
-                                    <source src={`./public/audios/${track.audio}`} type={"audio/mpeg"}/>
+                                    <source src={`./audios/${track.audio}`} type={"audio/mpeg"}/>
                                     Votre navigateur ne supporte pas l'élément audio.
                                 </audio>
                             </div>
                             <div className={"track-download"}>
-                                <a href={`./public/partitions/${track.pdf}`} download className={"download-link"}>
+                                <a href={`./partitions/${track.pdf}`} download className={"download-link"}>
                                     Télécharger la partition
                                 </a>
                             </div>

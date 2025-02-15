@@ -12,7 +12,7 @@ function App()
                 <header className={"app-header"}>
                     <nav className={"app-nav"}>
                         <NavLink
-                            to={"/Mystique"}
+                            to={"/Mystique/"}
                             end
                             className={({ isActive }: { isActive: boolean }) =>
                                 isActive ? "nav-link active" : "nav-link"
@@ -25,7 +25,7 @@ function App()
 
                 <main className={"app-main"}>
                     <Routes>
-                        <Route path={"/Mystique"} element={<MusicListApp />} />
+                        <Route path={"/Mystique/"} element={<MusicListApp />} />
                     </Routes>
                 </main>
             </div>
