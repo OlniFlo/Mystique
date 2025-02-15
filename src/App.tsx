@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import MusicListApp from "./MusicListApp";
 import "./App.css";
 import MusicSetlistApp from "./MusicSetlistApp";
@@ -13,6 +13,15 @@ function App()
 
     const handleMouseEnter = () => setIsMenuOpen(true);
     const handleMouseLeave = () => setIsMenuOpen(false);
+
+    /**
+     * Redirige vers #/Mystique/.
+     */
+    useEffect(() => {
+        if (!window.location.hash) {
+            window.location.replace("/#/");
+        }
+    }, []);
 
     /**
      * Ferme le menu si on clique en dehors.
@@ -31,7 +40,7 @@ function App()
     }, []);
 
     return (
-        <Router basename={"/Mystique/"}>
+        <Router>
             <div className={"App"}>
                 <header className={"app-header"}>
                     <nav className={"app-nav"} ref={menuRef} onMouseEnter={handleMouseEnter}
@@ -67,6 +76,10 @@ function App()
                             </li>
                         </ul>
                     </nav>
+
+                    <div className={"logo-container"}>
+                        <img src={"./logo.jpeg"} alt={"Logo"} className={"logo"}/>
+                    </div>
                 </header>
 
                 <main className={"app-main"}>
