@@ -76,6 +76,10 @@
                 .track-download
                 {
                     text-align: right;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    gap: 1em;
 
                     .download-link
                     {

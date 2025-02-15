@@ -143,6 +143,10 @@ const MusicListApp: React.FC = () => {
                                            className={"download-link"}>
                                             Voir la partition
                                         </a>
+                                        <a href={`/Mystique/partitions/${track.pdf}`} download
+                                           className={"download-link"}>
+                                            Télécharger la partition
+                                        </a>
                                     </div>
                                 )}
                             </li>
