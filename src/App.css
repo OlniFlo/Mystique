@@ -110,8 +110,6 @@
       background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAxMS44Mjg0TDkuMTcxNTQgMTQuNjU2OUw3Ljc1NzMyIDEzLjI0MjZMMTIgOUwxNi4yNDI2IDEzLjI0MjZMMTQuODI4NCAxNC42NTY5TDEyIDExLjgyODRaIj48L3BhdGg+PC9zdmc+");
       background-size: contain;
       background-repeat: no-repeat;
-      padding: 0.1em;
-      border-radius: 0.5em;
     }
 
     .menu-button.open .dropdown-arrow
