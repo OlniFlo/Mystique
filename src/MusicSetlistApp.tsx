@@ -47,7 +47,7 @@ const MusicSetlistApp: React.FC = () => {
 
                             {setlist.pdf && (
                                 <div className={"track-download"}>
-                                    <a href={`./partitions/${setlist.pdf}`} download className={"download-link"}>
+                                    <a href={`./Documents/${setlist.pdf}`} download className={"download-link"}>
                                         Télécharger le document
                                     </a>
                                 </div>
