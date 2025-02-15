@@ -1,20 +1,39 @@
 [
   {
-    "title": "September - Earth Wind and Fire",
-    "audio": "September - Leonid & Friends (Earth, Wind & Fire cover).mp3",
-    "pdf": "September - Earth Wind and Fire.pdf",
+    "title": "September EWF",
+    "audio": "September_EWF.mp3",
+    "pdf": "September_EWF.pdf",
     "genre": "Funk"
   },
  {
     "title": "Sugar - Marron 5",
-    "audio": "Maroon 5  Sugar   The Voice 2015.mp3",
-    "pdf": "Sugar - Marron 5.pdf",
+    "audio": "Maroon_5_Sugar.mp3",
+    "pdf": "Sugar_Marron_5.pdf",
     "genre": "Funk"
   },
   {
-    "title": "Until I  Found You - Stephen Sanchez",
-    "audio": "Stephen Sanchez - Until I Found You LIVE.mp3",
-    "pdf": "",
+    "title": "Until - Stephen Sanchez",
+    "audio": "Stephen Sanchez_Until_I_Found_You_LIVE.mp3",
+    "pdf": "Until_I_Found_You.pdf",
     "genre": "Chill"
+  },
+    {
+    "title": "Californication Red Hot",
+    "audio": "Californication_Red Hot Chili Peppers.mp3",
+    "pdf": "Califonication_Redhot.pdf",
+    "genre": "Rock Classique"
+  },
+    {
+    "title": "Sweet Dreams - Eurythmics",
+    "audio": "Sweet Dreams_Eurythmics.mp3",
+    "pdf": "Sweet Dreams_Eurythmics.pdf",
+    "genre": "Rock Classique"
+  },
+      {
+    "title": "Supermodel - Maneskin",
+    "audio": "Maneskin_Supermodel _ Live.mp3",
+    "pdf": "Supermodel_Maneskin.pdf",
+    "genre": "Rock Classique"
   }
+  
 ]
