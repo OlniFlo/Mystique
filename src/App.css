@@ -29,7 +29,7 @@
 
     .logo
     {
-      height: 3em;
+      height: calc(1em + 1vw);
       width: auto;
       object-fit: contain;
       background-color: transparent;
