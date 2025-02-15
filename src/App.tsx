@@ -72,8 +72,8 @@ function App()
 
                 <main className={"app-main"}>
                     <Routes>
-                    <Route path={"/Mystique/"} element={<MusicSetlistApp/>}/>
-                    <Route path={"/Mystique/Repertoire"} element={<MusicListApp/>}/>
+                        <Route path={"/Mystique/"} element={<MusicSetlistApp/>}/>
+                        <Route path={"/Mystique/Repertoire"} element={<MusicListApp/>}/>
                     </Routes>
                 </main>
             </div>
