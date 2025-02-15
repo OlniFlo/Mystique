@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import "./musicListApp.css";
+import {checkFileExists} from "./Utils";
 
 interface Track
 {
@@ -57,32 +58,6 @@ const MusicListApp: React.FC = () => {
                 setLoading(false);
             });
     }, []);
-
-    /**
-     * Vérifie si un fichier existe réellement en testant sa taille.
-     * @param filePath - Chemin du fichier.
-     * @returns {Promise<boolean>} - Retourne true si le fichier existe et a une taille correcte, sinon false.
-     */
-    const checkFileExists = async (filePath: string): Promise<boolean> => {
-        try
-        {
-            const response = await fetch(filePath, {
-                method: "HEAD",
-                cache: "no-store",
-            });
-
-            const contentLength = response.headers.get("Content-Length");
-
-            if ((response.status === 404 || !response.ok) || (!contentLength || parseInt(contentLength, 10) === 0))
-                return false;
-
-            return true;
-        }
-        catch (error)
-        {
-            return false;
-        }
-    };
 
     /**
      * Gère la lecture d'un audio, en stoppant l'audio en cours si nécessaire.

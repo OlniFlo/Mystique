@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./musicListApp.css";
+import {checkFileExists} from "./Utils";
 
 interface Setlist
 {
@@ -11,6 +12,7 @@ interface Setlist
 const MusicSetlistApp: React.FC = () => {
     const [setlists, setSetlists] = useState<Setlist[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
+    const [validPdfs, setValidPdfs] = useState<Set<string>>(new Set());
 
     useEffect(() => {
         fetch('./musicSetlist.json')
@@ -18,7 +20,19 @@ const MusicSetlistApp: React.FC = () => {
                 if (!response.ok) throw new Error("Erreur lors du chargement du fichier JSON");
                 return response.json();
             })
-            .then((data: Setlist[]) => {
+            .then(async (data: Setlist[]) => {
+                const pdfChecks = data.map(track =>
+                    track.pdf ? checkFileExists(`/Mystique/Documents/${track.pdf}`) : Promise.resolve(false)
+                );
+
+                const pdfResults = await Promise.all(pdfChecks);
+
+                const validPdfsSet = new Set<string>(
+                    data.filter((_, index) => pdfResults[index] && data[index].pdf)
+                        .map(track => track.pdf as string)
+                );
+
+                setValidPdfs(validPdfsSet);
                 setSetlists(data);
                 setLoading(false);
             })
@@ -45,10 +59,15 @@ const MusicSetlistApp: React.FC = () => {
                                 <p className={"track-genre"}>{setlist.description}</p>
                             )}
 
-                            {setlist.pdf && (
+                            {setlist.pdf && validPdfs.has(setlist.pdf) && (
                                 <div className={"track-download"}>
+                                    <a href={`./Documents/${setlist.pdf}`} target={"_blank"}
+                                       rel={"noopener noreferrer"}
+                                       className={"download-link"}>
+                                        Voir la Setlist
+                                    </a>
                                     <a href={`./Documents/${setlist.pdf}`} download className={"download-link"}>
-                                        Télécharger le document
+                                        Télécharger la Setlist
                                     </a>
                                 </div>
                             )}
