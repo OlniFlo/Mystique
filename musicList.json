@@ -1,15 +1,20 @@
 [
   {
-    "title": "Treasure Live",
-    "audio": "Bruno Mars - Treasure.mp3",
-    "pdf": "",
+    "title": "September - Earth Wind and Fire",
+    "audio": "September - Leonid & Friends (Earth, Wind & Fire cover).mp3",
+    "pdf": "September - Earth Wind and Fire.pdf",
     "genre": "Funk"
   },
  {
-    "title": "J'irai ou tu iras",
-    "audio": "J'irai ou tu iras.mp3",
-    "pdf": "Celine Dion - J'irai ou tu iras PDF.pdf",
-    "genre": "Rock"
+    "title": "Sugar - Marron 5",
+    "audio": "Maroon 5 Sugar The Voice 2015.mp3",
+    "pdf": "",
+    "genre": "Funk"
   }
- 
+  {
+    "title": "Until I  Found You - Stephen Sanchez",
+    "audio": "Maroon 5 Sugar The Voice 2015.mp3",
+    "pdf": "",
+    "genre": "Chill"
+  }
 ]
