@@ -5,7 +5,7 @@
   height: 100vh;
   width: 100vw;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #444;
+  color: #111827;
   overflow: hidden;
 }
 
@@ -17,27 +17,103 @@
   width: 100%;
   background-color: #1f2937;
   padding: 1em;
-  border-bottom: 0.0625em solid #374151;
+  border-bottom: 0.0625em solid #2d3748;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
 
   .app-nav
   {
+    position: relative;
     display: flex;
-    gap: 1em;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+
+    .menu-button
+    {
+      background: #2563eb;
+      border: none;
+      color: #ffffff;
+      font-size: 1.2em;
+      cursor: pointer;
+      padding: 0.5em 1em;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+
+    .menu-button:hover
+    {
+      background-color: #1d4ed8;
+    }
+
+    .menu-button:focus
+    {
+      outline: none;
+    }
+
+    .dropdown-arrow
+    {
+      width: 1em;
+      height: 1em;
+      transition: transform 0.3s ease;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAxMS44Mjg0TDkuMTcxNTQgMTQuNjU2OUw3Ljc1NzMyIDEzLjI0MjZMMTIgOUwxNi4yNDI2IDEzLjI0MjZMMTQuODI4NCAxNC42NTY5TDEyIDExLjgyODRaIj48L3BhdGg+PC9zdmc+");
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 0.1em;
+      border-radius: 0.5em;
+    }
+
+    .menu-button.open .dropdown-arrow
+    {
+      transform: rotate(180deg);
+    }
+
+
+    .dropdown-menu
+    {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #374151;
+      border-radius: 0.5em;
+      border: 0.1em solid #4a5568;
+      position: absolute;
+      top: 2.8em;
+      opacity: 0;
+      visibility: hidden;
+      min-width: 12em;
+      box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    }
+
+    .dropdown-menu.open
+    {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu li
+    {
+      padding: 0.5em;
+    }
 
     .nav-link
     {
       text-decoration: none;
-      color: #d1d5db;
+      color: #f0f0f0;
       padding: 0.5em 1em;
+      display: block;
       border-radius: 0.25em;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
 
       &:hover
       {
-        background-color: #374151;
+        background-color: #475569;
+        color: #93c5fd;
       }
 
       &.active
