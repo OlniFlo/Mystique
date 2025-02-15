@@ -19,7 +19,7 @@ function App()
      */
     useEffect(() => {
         if (!window.location.hash) {
-            window.location.replace("/#/");
+            window.location.replace("#/Mystique/");
         }
     }, []);
 
@@ -40,7 +40,7 @@ function App()
     }, []);
 
     return (
-        <Router>
+        <Router basename={"/Mystique/"}>
             <div className={"App"}>
                 <header className={"app-header"}>
                     <nav className={"app-nav"} ref={menuRef} onMouseEnter={handleMouseEnter}
