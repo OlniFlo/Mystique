@@ -53,8 +53,8 @@
 {
   width: 100vw;
   flex: 1;
-  padding: 1em;
-  background-color: #f3f4f6;
+  background: url("./public/background-screen.jpg") no-repeat center center;
+  background-size: cover;
   margin-top: 4em;
   display: flex;
   flex-direction: column;

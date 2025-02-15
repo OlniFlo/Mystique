@@ -18,6 +18,15 @@ function App()
                                 isActive ? "nav-link active" : "nav-link"
                             }
                         >
+                            Setlist
+                        </NavLink>
+                        <NavLink
+                            to={"/Mystique/"}
+                            end
+                            className={({ isActive }: { isActive: boolean }) =>
+                                isActive ? "nav-link active" : "nav-link"
+                            }
+                        >
                             Répertoire
                         </NavLink>
                     </nav>

@@ -4,9 +4,9 @@ import "./musicListApp.css";
 interface Track
 {
     title: string;
-    audio: string;
-    pdf: string;
-    genre: string;
+    audio?: string;
+    pdf?: string;
+    genre?: string;
 }
 
 const MusicListApp: React.FC = () => {
@@ -20,7 +20,7 @@ const MusicListApp: React.FC = () => {
                     throw new Error("Erreur lors du chargement du fichier JSON");
                 return response.json();
             })
-            .then((data: Track[]) => {
+            .then(async (data: Track[]) => {
                 setTracks(data);
                 setLoading(false);
             })
@@ -35,9 +35,6 @@ const MusicListApp: React.FC = () => {
 
     return (
         <div className={"music-list-container"}>
-            <header className={"music-header"}>
-                <h1 className={"music-title"}>Liste des musiques</h1>
-            </header>
             <main className={"music-main"}>
                 <ul className={"music-items"}>
                     {tracks.map((track, index) => (
@@ -46,18 +43,25 @@ const MusicListApp: React.FC = () => {
                                 <span className={"track-number"}>{index + 1}.</span>
                                 <h2 className={"track-title"}>{track.title}</h2>
                             </div>
-                            <p className={"track-genre"}>Genre : {track.genre}</p>
-                            <div className={"track-audio"}>
-                                <audio controls className={"audio-player"}>
-                                    <source src={`./audios/${track.audio}`} type={"audio/mpeg"}/>
-                                    Votre navigateur ne supporte pas l'élément audio.
-                                </audio>
-                            </div>
-                            <div className={"track-download"}>
-                                <a href={`./partitions/${track.pdf}`} download className={"download-link"}>
-                                    Télécharger la partition
-                                </a>
-                            </div>
+
+                            {track.genre && <p className={"track-genre"}>Genre : {track.genre}</p>}
+
+                            {track.audio && (
+                                <div className={"track-audio"}>
+                                    <audio controls className={"audio-player"}>
+                                        <source src={`./audios/${track.audio}`} type={"audio/mpeg"} />
+                                        Votre navigateur ne supporte pas l'élément audio.
+                                    </audio>
+                                </div>
+                            )}
+
+                            {track.pdf && (
+                                <div className={"track-download"}>
+                                    <a href={`./partitions/${track.pdf}`} download className={"download-link"}>
+                                        Télécharger la partition
+                                    </a>
+                                </div>
+                            )}
                         </li>
                     ))}
                 </ul>
