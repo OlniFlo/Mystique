@@ -92,6 +92,30 @@
                         font-weight: 600;
                         transition: background-color 0.3s ease;
 
+                        .upload-icon, .eye-icon
+                        {
+                            width: 1.5em;
+                            height: 1.5em;
+                            transition: transform 0.3s ease;
+                            filter: invert(1);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            padding: 0.5em;
+                            border-radius: 0.5em;
+                            margin-right: 0.5em;
+                        }
+
+                        .upload-icon
+                        {
+                            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANZJREFUSEvtlNENwjAMRK+bwCawCUwCo8AkjAKblB5KkOvGcSyafhGpUqvG984XtwM6r6GzPqKAMRlqrmvemIT/APfIV4noBGA3oa4FXA1wAMBrVqcPmcJPAC8A9wLEAlD4kQztU/3nsTRFdHAxICWAFD9P3d9k59aYWhANqIpbHWQDJYgEuOIegO81hNFxHUXmi1haIpJ7JIRDIFdVvKUDHVdIPAKQcfHedZ6dRH92jIvfyGwUa99/FOD+S/SGzQF5zsNOVcHXuO6gO+BX54v6zc9g9Q7ewd0wGUIGw+EAAAAASUVORK5CYII=");
+                        }
+
+                        .eye-icon
+                        {
+                            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAW9JREFUSEvVlYtNAzEQRCedQCVAJZBKgEoglZBUAp1AnrUTrTf2cUhEAkun+9g7szNr72104bG5ML7+BMGDpJtQehv3D0kHSXtJPHMNx5ICgB8lXX1jI+DPx3Wvo3UjAgBfjtk5W7LcRTDPDNYwf58SYG5b1YwI3iKYzAgw6ExIVkrMXSapBBn8uiA6a3tefX8PNbarzWeCp/CciQpu4syJ54CZiARYx53v4HUEnxGNLblgJmaa71bC+wko7TJITklaAUFIrNn7O/F463pQYIAYqM122aq23gTOsma0ZBs7jQLPFKN2a4LZYgCYa4tL0R0zS6p9N4ElYwHSPGZWZOtWWQSgvasBuci5Bi56VnZWy9k27Q5L2IRddZuOwLvdVQ+afT07kXG63Zfc5EyY20tn86hV2KrFJpak1FbRHdK1za62ZttFs8tNMW+QlsNvtetpU1zzRyNbPOanw53LrQRlw/+ALVxDUDbPz17/P8EXUIxxGUWaOeIAAAAASUVORK5CYII=");
+                        }
+
                         &:hover
                         {
                             background-color: #2563eb;

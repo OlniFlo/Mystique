@@ -64,10 +64,12 @@ const MusicSetlistApp: React.FC = () => {
                                     <a href={`./Documents/${setlist.pdf}`} target={"_blank"}
                                        rel={"noopener noreferrer"}
                                        className={"download-link"}>
-                                        Voir la Setlist
+                                        <span className={"eye-icon"}></span>
+                                        Voir
                                     </a>
                                     <a href={`./Documents/${setlist.pdf}`} download className={"download-link"}>
-                                        Télécharger la Setlist
+                                        <span className={"upload-icon"}></span>
+                                        Télécharger
                                     </a>
                                 </div>
                             )}
