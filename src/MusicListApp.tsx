@@ -14,7 +14,7 @@ const MusicListApp: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        fetch('./musicList.json')
+        fetch('./../musicList.json')
             .then((response) => {
                 if (!response.ok)
                     throw new Error("Erreur lors du chargement du fichier JSON");
