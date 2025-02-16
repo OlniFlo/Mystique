@@ -10,7 +10,7 @@ const LegalMentions: React.FC = () => {
                 <h2>1. Éditeur du site</h2>
                 <p>
                     Ce site est édité et maintenu par <strong>Théo DILL</strong>. <br/>
-                    Il est hébergé sur le compte GitHub de <strong>Florian ORLANDELLI</strong>, qui peut également le modifier si
+                    Il est hébergé sur le compte GitHub de <strong>OlniFlo</strong>, qui peut également le modifier si
                     nécessaire. <br/>
                     Contact : <a href="mailto:dill.fisselbrand.theo@gmail.com">dill.fisselbrand.theo@gmail.com</a>
                 </p>
@@ -38,9 +38,8 @@ const LegalMentions: React.FC = () => {
             <section>
                 <h2>4. Responsable du site</h2>
                 <p>
-                    Le site est administré par <strong>Florian ORLANDELLI</strong>. <br/>
-                    Contact : <a href="mailto:Orlandelli.florian@outlook.fr">Orlandelli.florian@outlook.fr</a> <br/>
-                    Le responsable de la publication est <strong>Florian ORLANDELLI</strong>.
+                    Le site est administré par <strong>OlniFlo</strong>. <br/>
+                    Le responsable de la publication est <strong>OlniFlo</strong>.
                 </p>
             </section>
 
@@ -48,7 +47,7 @@ const LegalMentions: React.FC = () => {
                 <h2>5. Propriété intellectuelle</h2>
                 <p>
                     Tout le contenu de ce site (textes, images, logos, vidéos, etc.) est protégé par le droit
-                    d’auteur et est la propriété exclusive de <strong>Florian ORDLANDELLI</strong>. Toute reproduction,
+                    d’auteur et est la propriété exclusive de <strong>OlniFlo</strong>. Toute reproduction,
                     diffusion ou modification sans autorisation est interdite.
                 </p>
             </section>
@@ -56,7 +55,7 @@ const LegalMentions: React.FC = () => {
             <section>
                 <h2>6. Responsabilité</h2>
                 <p>
-                    Les informations fournies sur ce site sont données à titre indicatif. <strong>Florian ORLANDELLI</strong>{" "}
+                    Les informations fournies sur ce site sont données à titre indicatif. <strong>OlniFlo</strong>{" "}
                     ne peut être tenu responsable en cas d’inexactitude ou d’omission.
                 </p>
             </section>
