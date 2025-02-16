@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
                     Mentions légales
                 </NavLink>
             </div>
-            <div className={"footer-left"}>© 2025 Réalisé par Théo DILL</div>
+            <div className={"footer-left"}>© 2025 OlniFlo</div>
         </footer>
     );
 };
