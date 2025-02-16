@@ -39,6 +39,7 @@ const LegalMentions: React.FC = () => {
                 <h2>4. Responsable du site</h2>
                 <p>
                     Le site est administré par <strong>OlniFlo</strong>. <br/>
+                    Contact : <a href="mailto:OlniFlo@outlook.fr">OlniFlo@outlook.fr</a> <br/>
                     Le responsable de la publication est <strong>OlniFlo</strong>.
                 </p>
             </section>
