@@ -70,6 +70,24 @@
     "audio": "Get Lucky_JK.mp3",
     "pdf": "Get_Lucky.pdf",
     "genre": "Pop Festif"
+  },
+       {
+    "title": "Beautiful Things - Benson Boone",
+    "audio": "Beautiful_Things",
+    "pdf": "Beautiful_thing.pdf",
+    "genre": "Pop Rock"
+  },
+    {
+    "title": "Fireflies - Owl City",
+    "audio": "Fireflies_Live.mp3",
+    "pdf": "Fireflies.pdf",
+    "genre": "Rock"
+  },
+    {
+    "title": "Oh My God - Adele",
+    "audio": "Adele_Oh_My_God.mp3",
+    "pdf": "oh_my_god_adele.pdf",
+    "genre": "Pop"
   }
   
 ]
