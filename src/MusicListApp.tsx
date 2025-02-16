@@ -85,10 +85,10 @@ const MusicListApp: React.FC = () => {
     const genres = Array.from(new Set(tracks.map(track => track.genre).filter(Boolean))) as string[];
     const availableGenres = genres.filter(genre => !selectedGenres.has(genre) && genre.toLowerCase().includes(searchTerm.toLowerCase()));
 
-    const handleAddGenre = (genre: string) => {
+    const handleAddGenre = (genre: string, shouldShowOptions: boolean = false) => {
         setSelectedGenres(prev => new Set([...prev, genre]));
         setSearchTerm("");
-        setShowSuggestions(false);
+        setShowSuggestions(shouldShowOptions);
     };
 
     const handleRemoveGenre = (genre: string) => {
@@ -100,8 +100,9 @@ const MusicListApp: React.FC = () => {
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === "Enter" && availableGenres.length > 0) {
-            handleAddGenre(availableGenres[0]);
+        if (e.key === "Enter" && availableGenres.length > 0)
+        {
+            handleAddGenre(availableGenres[0], true);
         }
     };
 
