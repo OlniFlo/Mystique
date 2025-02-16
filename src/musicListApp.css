@@ -257,8 +257,10 @@
 
                     .audio-player
                     {
+                        flex-grow: 1;
                         width: 100%;
                         outline: none;
+                        border-radius: 0.5em;
                     }
                 }
 
@@ -311,6 +313,25 @@
                         }
                     }
                 }
+            }
+
+            .music-item.playing
+            {
+                border-left: 0.375em solid #2563eb;
+                box-shadow: 0 0.25em 0.5em rgba(37, 99, 235, 0.2);
+                transition: border-left 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .music-item.playing .track-title
+            {
+                color: #2563eb;
+                font-weight: bold;
+            }
+
+            .music-item.playing .track-number
+            {
+                color: #2563eb;
+                font-weight: bold;
             }
         }
     }

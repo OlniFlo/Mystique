@@ -14,6 +14,7 @@ const MusicListApp: React.FC = () => {
     const [tracks, setTracks] = useState<Track[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(null);
+    const [playingIndex, setPlayingIndex] = useState<number | null>(null);
     const [validAudios, setValidAudios] = useState<Set<string>>(new Set());
     const [validPdfs, setValidPdfs] = useState<Set<string>>(new Set());
     const [selectedGenres, setSelectedGenres] = useState<Set<string>>(new Set());
@@ -72,13 +73,29 @@ const MusicListApp: React.FC = () => {
         if (!newAudio) return;
 
         // Stop l'audio précédent s'il existe
-        if (currentAudio && currentAudio !== newAudio) {
+        if (currentAudio && currentAudio !== newAudio)
+        {
             currentAudio.pause();
             currentAudio.currentTime = 0;
         }
 
-        // Met à jour l'état avec le nouvel audio en lecture
+        // Met à jour l'état avec le nouvel audio.
         setCurrentAudio(newAudio);
+        setPlayingIndex(index);
+
+        // On s'assure que onEnded remet bien l'état à null.
+        newAudio.onended = () => {
+            setPlayingIndex(null);
+        };
+    };
+
+    /**
+     * Gère la mise en pause d'un audio.
+     * @param index - Index de l'audio mis en pause.
+     */
+    const handlePause = (index: number) => {
+        if (playingIndex === index)
+            setPlayingIndex(null);
     };
 
     // Extrait les genres uniques pour le menu déroulant.
@@ -152,7 +169,7 @@ const MusicListApp: React.FC = () => {
                 <ul className={"music-items"}>
                     {filteredTracks.map((track, index) => {
                         return (
-                            <li key={track.index} className={"music-item"}>
+                            <li key={track.index} className={`music-item ${playingIndex === index ? "playing" : ""}`}>
                                 <div className={"track-header"}>
                                     <span className={"track-number"}>{track.index + 1}.</span>
                                     <h2 className={"track-title"}>{track.title}</h2>
@@ -167,8 +184,9 @@ const MusicListApp: React.FC = () => {
                                                 if (el) audioRefs.current.set(index, el);
                                             }}
                                             controls
-                                            className="audio-player"
+                                            className={"audio-player"}
                                             onPlay={() => handlePlay(index)}
+                                            onPause={() => handlePause(index)}
                                         >
                                             <source src={`/Mystique/audios/${track.audio}`} type={"audio/mpeg"}/>
                                             Votre navigateur ne supporte pas l'élément audio.
