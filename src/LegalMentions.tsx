@@ -10,7 +10,7 @@ const LegalMentions: React.FC = () => {
                 <h2>1. Éditeur du site</h2>
                 <p>
                     Ce site est édité et maintenu par <strong>Théo DILL</strong>. <br/>
-                    Il est hébergé sur le compte GitHub de <strong>Florian ORDLANDELLI</strong>, qui peut également le modifier si
+                    Il est hébergé sur le compte GitHub de <strong>Florian ORLANDELLI</strong>, qui peut également le modifier si
                     nécessaire. <br/>
                     Contact : <a href="mailto:dill.fisselbrand.theo@gmail.com">dill.fisselbrand.theo@gmail.com</a>
                 </p>
@@ -29,7 +29,7 @@ const LegalMentions: React.FC = () => {
             <section>
                 <h2>3. Réalisation du site</h2>
                 <p>
-                    Ce site a été conçu et développé par <strong>Théo DILL</strong> à titre gratuit. <br/>
+                    Ce site a été conçu et développé par <strong>Théo DILL</strong>. <br/>
                     Pour toute question relative au développement, vous pouvez nous contacter à :{" "}
                     <a href={"mailto:dill.fisselbrand.theo@gmail.com"}>dill.fisselbrand.theo@gmail.com</a>.
                 </p>
@@ -38,9 +38,9 @@ const LegalMentions: React.FC = () => {
             <section>
                 <h2>4. Responsable du site</h2>
                 <p>
-                    Le site est administré par <strong>Florian ORDLANDELLI</strong>. <br/>
+                    Le site est administré par <strong>Florian ORLANDELLI</strong>. <br/>
                     Contact : <a href="mailto:Orlandelli.florian@outlook.fr">Orlandelli.florian@outlook.fr</a> <br/>
-                    Le responsable de la publication est <strong>Florian ORDLANDELLI</strong>.
+                    Le responsable de la publication est <strong>Florian ORLANDELLI</strong>.
                 </p>
             </section>
 
@@ -56,7 +56,7 @@ const LegalMentions: React.FC = () => {
             <section>
                 <h2>6. Responsabilité</h2>
                 <p>
-                    Les informations fournies sur ce site sont données à titre indicatif. <strong>Florian ORDLANDELLI</strong>{" "}
+                    Les informations fournies sur ce site sont données à titre indicatif. <strong>Florian ORLANDELLI</strong>{" "}
                     ne peut être tenu responsable en cas d’inexactitude ou d’omission.
                 </p>
             </section>
