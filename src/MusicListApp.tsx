@@ -16,6 +16,9 @@ const MusicListApp: React.FC = () => {
     const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(null);
     const [validAudios, setValidAudios] = useState<Set<string>>(new Set());
     const [validPdfs, setValidPdfs] = useState<Set<string>>(new Set());
+    const [selectedGenres, setSelectedGenres] = useState<Set<string>>(new Set());
+    const [searchTerm, setSearchTerm] = useState<string>("");
+    const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
 
     // Utilisation d'une Map pour stocker les références des audios.
     const audioRefs = useRef<Map<number, HTMLAudioElement>>(new Map());
@@ -78,18 +81,79 @@ const MusicListApp: React.FC = () => {
         setCurrentAudio(newAudio);
     };
 
+    // Extrait les genres uniques pour le menu déroulant.
+    const genres = Array.from(new Set(tracks.map(track => track.genre).filter(Boolean))) as string[];
+    const availableGenres = genres.filter(genre => !selectedGenres.has(genre) && genre.toLowerCase().includes(searchTerm.toLowerCase()));
+
+    const handleAddGenre = (genre: string) => {
+        setSelectedGenres(prev => new Set([...prev, genre]));
+        setSearchTerm("");
+        setShowSuggestions(false);
+    };
+
+    const handleRemoveGenre = (genre: string) => {
+        setSelectedGenres(prev => {
+            const newSet = new Set(prev);
+            newSet.delete(genre);
+            return newSet;
+        });
+    };
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter" && availableGenres.length > 0) {
+            handleAddGenre(availableGenres[0]);
+        }
+    };
+
+    // Filtre les morceaux par genre sélectionné tout en conservant l'ordre.
+    const filteredTracks =
+        selectedGenres.size > 0
+            ? tracks.map((track, index) => (selectedGenres.has(track.genre!) ? { ...track, index } : null))
+                .filter(Boolean) as (Track & { index: number })[]
+            : tracks.map((track, index) => ({ ...track, index }));
+
     if (loading)
         return <p>Chargement...</p>;
 
     return (
         <div className={"music-list-container"}>
+            <div className={"genre-filter"}>
+                <label>Filtrer par genres :</label>
+                <div className={"filter-input-container"}>
+                    {Array.from(selectedGenres).map((genre) => (
+                        <span key={genre} className={"filter-tag"}>
+                            {genre}
+                            <button onClick={() => handleRemoveGenre(genre)} className={"remove-tag"}>×</button>
+                        </span>
+                    ))}
+                    <input
+                        type={"text"}
+                        placeholder={"Rechercher un genre"}
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onFocus={() => setShowSuggestions(true)}
+                        onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+                        onKeyDown={handleKeyDown}
+                    />
+                </div>
+                {showSuggestions && availableGenres.length > 0 && (
+                    <ul className={"genre-suggestions"}>
+                        {availableGenres.map((genre) => (
+                            <li key={genre} onClick={() => handleAddGenre(genre)}>
+                                {genre}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </div>
+
             <main className={"music-main"}>
                 <ul className={"music-items"}>
-                    {tracks.map((track, index) => {
+                    {filteredTracks.map((track, index) => {
                         return (
-                            <li key={index} className={"music-item"}>
+                            <li key={track.index} className={"music-item"}>
                                 <div className={"track-header"}>
-                                    <span className={"track-number"}>{index + 1}.</span>
+                                    <span className={"track-number"}>{track.index + 1}.</span>
                                     <h2 className={"track-title"}>{track.title}</h2>
                                 </div>
 
