@@ -194,6 +194,48 @@
         }
     }
 
+    .title-filter
+    {
+        width: 100%;
+        max-width: 28.125em;
+        padding: 0.2em;
+        background: linear-gradient(135deg, #252930, #2e333b);
+        border-radius: 0.5em;
+        box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.3);
+        color: #f5f5f5;
+        position: relative;
+        font-size: 1rem;
+        margin-bottom: 0.8em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.8em;
+
+        label
+        {
+            white-space: nowrap;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        input
+        {
+            flex: 1;
+            padding: 0.5em;
+            outline: none;
+            color: #f0f0f0;
+            font-size: 1rem;
+            border-radius: 0.4em;
+            background: #1a1d23;
+            border: 0.063em solid #3a3f4a;
+        }
+
+        input::placeholder
+        {
+            color: #aaa;
+        }
+    }
+
     .music-main
     {
         .music-items

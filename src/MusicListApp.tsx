@@ -20,6 +20,7 @@ const MusicListApp: React.FC = () => {
     const [selectedGenres, setSelectedGenres] = useState<Set<string>>(new Set());
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
+    const [searchTitle, setSearchTitle] = useState<string>("");
 
     // Utilisation d'une Map pour stocker les références des audios.
     const audioRefs = useRef<Map<number, HTMLAudioElement>>(new Map());
@@ -124,11 +125,14 @@ const MusicListApp: React.FC = () => {
     };
 
     // Filtre les morceaux par genre sélectionné tout en conservant l'ordre.
-    const filteredTracks =
-        selectedGenres.size > 0
-            ? tracks.map((track, index) => (selectedGenres.has(track.genre!) ? { ...track, index } : null))
-                .filter(Boolean) as (Track & { index: number })[]
-            : tracks.map((track, index) => ({ ...track, index }));
+    const filteredTracks = tracks
+        .map((track, index) => ({ ...track, index })) // Ajoute l'index pour garder l'ordre.
+        .filter(track =>
+            // Vérifie si le titre correspond au terme recherché.
+            track.title.toLowerCase().includes(searchTitle.toLowerCase()) &&
+            // Vérifie si un genre est sélectionné.
+            (selectedGenres.size === 0 || selectedGenres.has(track.genre!))
+        );
 
     if (loading)
         return <p>Chargement...</p>;
@@ -163,6 +167,16 @@ const MusicListApp: React.FC = () => {
                         ))}
                     </ul>
                 )}
+            </div>
+
+            <div className={"title-filter"}>
+                <label>Rechercher un titre :</label>
+                <input
+                    type={"text"}
+                    placeholder={"Entrez un titre"}
+                    value={searchTitle}
+                    onChange={(e) => setSearchTitle(e.target.value)}
+                />
             </div>
 
             <main className={"music-main"}>
