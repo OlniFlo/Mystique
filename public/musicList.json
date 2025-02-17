@@ -88,6 +88,49 @@
     "audio": "Adele_Oh_My_God.mp3",
     "pdf": "oh_my_god_adele.pdf",
     "genre": "Pop"
+  },
+  {
+    "title": "Le Freak - CHIC",
+    "audio": "Le Freak _CHIC.mp3",
+    "pdf": "Freak.pdf",
+    "genre": "Disco-Funk"
+  },
+  {
+    "title": "Fresh - Kool & The Gang",
+    "audio": "Fresh.mp3",
+    "pdf": "Fresh.pdf",
+    "genre": "Disco-Funk"
+  },
+  {
+    "title": "This Love - Maroon 5",
+    "audio": "This_Love.mp3",
+    "pdf": "this_love.pdf",
+    "genre": "Pop Rock"
+  },
+    {
+    "title": "Smells Like Teen Spirit - Nirvana",
+    "audio": "Smells.mp3",
+    "pdf": "smells.pdf",
+    "genre": "Rock"
+  },
+{
+    "title": "Radioactive - Imagine Dragon",
+    "audio": "Radioactive.mp3",
+    "pdf": "Radioactive.pdf",
+    "genre": "Pop-Rock"
+  },
+  {
+    "title": "Baggin - Maneskin",
+    "audio": "Beggin.mp3",
+    "pdf": "Beggin.pdf",
+    "genre": "Rock"
+  },
+   {
+    "title": "Kiss - Prince",
+    "audio": "Kiss.mp3",
+    "pdf": "Kiss.pdf",
+    "genre": "Rock"
   }
+  
   
 ]
