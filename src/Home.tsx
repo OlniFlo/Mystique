@@ -50,8 +50,8 @@ const Home: React.FC = () => {
             <div className={"home-content"}>
                 <h1 className={"home-title"}>{content.title}</h1>
                 <p className={"home-description"}>{content.description}</p>
-                <img src={content.image} alt={"Groupe"} className={"home-image"}/>
             </div>
+            <img src={content.image} alt={"Groupe"} className={"home-image"}/>
         </div>
     );
 };

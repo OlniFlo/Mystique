@@ -14,6 +14,7 @@
         display: inline-block;
         max-width: 100%;
         text-align: center;
+        opacity: 0.9;
 
         .home-title
         {
@@ -29,14 +30,15 @@
             margin-bottom: 1.5em;
             line-height: 1.6;
         }
+    }
 
-        .home-image
-        {
-            width: 100%;
-            max-width: 40em;
-            border-radius: 0.5em;
-            box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.2);
-            margin-top: 1.5em;
-        }
+    .home-image
+    {
+        width: 100%;
+        max-width: 40em;
+        border-radius: 0.5em;
+        box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.2);
+        margin-top: 1.5em;
+        opacity: 1;
     }
 }

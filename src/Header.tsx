@@ -44,7 +44,17 @@ const Header: React.FC<{ onRefresh: () => void }> = ({ onRefresh }) => {
                         <NavLink
                             to={"/"}
                             end
-                            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                            className={({isActive}) => (isActive ? "nav-link active" : "nav-link")}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Accueil
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to={"/Setlist"}
+                            end
+                            className={({isActive}) => (isActive ? "nav-link active" : "nav-link")}
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Setlist
@@ -54,7 +64,7 @@ const Header: React.FC<{ onRefresh: () => void }> = ({ onRefresh }) => {
                         <NavLink
                             to={"/Repertoire"}
                             end
-                            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                            className={({isActive}) => (isActive ? "nav-link active" : "nav-link")}
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Répertoire
@@ -64,7 +74,7 @@ const Header: React.FC<{ onRefresh: () => void }> = ({ onRefresh }) => {
             </nav>
 
             <div className={"logo-container"}>
-                <img src={"./logo.jpeg"} alt={"Logo"} className={"logo"} />
+                <img src={"./logo.jpeg"} alt={"Logo"} className={"logo"}/>
             </div>
         </header>
     );
