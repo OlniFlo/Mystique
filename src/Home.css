@@ -60,6 +60,11 @@
 
 @media screen and (max-width: 48em)
 {
+    .home-container
+    {
+        padding: 1em;
+    }
+
     .home-title
     {
         font-size: 2.5em;
