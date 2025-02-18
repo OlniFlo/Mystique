@@ -101,13 +101,13 @@
     "pdf": "Fresh.pdf",
     "genre": "Disco-Funk"
   },
-  {
+{
     "title": "This Love - Maroon 5",
     "audio": "This_Love.mp3",
     "pdf": "this_love.pdf",
     "genre": "Pop Rock"
   },
-    {
+{
     "title": "Smells Like Teen Spirit - Nirvana",
     "audio": "Smells.mp3",
     "pdf": "smells.pdf",
@@ -119,23 +119,41 @@
     "pdf": "Radioactive.pdf",
     "genre": "Pop-Rock"
   },
-  {
+{
     "title": "Beggin - Maneskin (Live)",
     "audio": "Beggin.mp3",
     "pdf": "Beggin.pdf",
     "genre": "Rock"
   },
-   {
+{
     "title": "Kiss - Prince",
     "audio": "Kiss.mp3",
     "pdf": "Kiss.pdf",
     "genre": "Rock"
   },
-  {
+{
     "title": "J'irai ou tu iras (Live)",
     "audio": "jirai_ou_tu_iras.mp3",
     "pdf": "jirai_ou_tu_iras.pdf",
     "genre": "Rock"
+  },
+{
+    "title": "Are You Gonna Go My Way - Lenny Kravitz",
+    "audio": "Are_you_gonna.mp3",
+    "pdf": "are_you_gonna.pdf",
+    "genre": "Rock"
+  },
+{
+    "title": "Celebration",
+    "audio": "Celebration.mp3",
+    "pdf": "celebration.pdf",
+    "genre": "Funk-Disco"
+  },
+  {
+    "title": "We Found Love - Rihanna",
+    "audio": "We_Found_Love.mp3",
+    "pdf": "we_found_love.pdf",
+    "genre": "Pop"
   }
   
   
