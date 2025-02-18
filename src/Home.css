@@ -4,6 +4,11 @@
     padding: 2em;
     max-width: 50em;
     margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .home-content
     {
@@ -50,5 +55,29 @@
             box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.2);
             margin-top: 1em;
         }
+    }
+}
+
+@media screen and (max-width: 48em)
+{
+    .home-title
+    {
+        font-size: 2.5em;
+    }
+
+    .home-description
+    {
+        font-size: 1.2em;
+    }
+
+    .home-content
+    {
+        padding: 1.5em;
+    }
+
+    .home-image, .additional-image
+    {
+        max-width: 100%;
+        margin-top: 1em;
     }
 }
