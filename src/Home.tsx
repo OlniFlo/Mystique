@@ -6,6 +6,7 @@ interface HomeContent
     title: string;
     description: string;
     image: string;
+    additionalImage?: string;
 }
 
 const Home: React.FC = () => {
@@ -50,8 +51,9 @@ const Home: React.FC = () => {
             <div className={"home-content"}>
                 <h1 className={"home-title"}>{content.title}</h1>
                 <p className={"home-description"}>{content.description}</p>
+                <img src={content.image} alt={"Logo"} className={"home-image"}/>
+                {content.additionalImage && <img src={content.additionalImage} alt={"Groupe"} className={"additional-image"} />}
             </div>
-            <img src={content.image} alt={"Groupe"} className={"home-image"}/>
         </div>
     );
 };
