@@ -6,6 +6,7 @@ import MusicSetlistApp from "./MusicSetlistApp";
 import LegalMentions from "./LegalMentions";
 import Footer from "./Footer";
 import Header from "./Header";
+import Home from "./Home";
 
 function App()
 {
@@ -34,7 +35,8 @@ function App()
 
                 <main className={"app-main"}>
                     <Routes>
-                        <Route path={"/"} element={<MusicSetlistApp/>}/>
+                        <Route path={"/"} element={<Home />}/>
+                        <Route path={"/Setlist"} element={<MusicSetlistApp/>}/>
                         <Route path={"/Repertoire"} element={<MusicListApp/>}/>
                         <Route path={"/mentions-legales"} element={<LegalMentions />} />
                     </Routes>

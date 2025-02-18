@@ -1,0 +1,42 @@
+.home-container
+{
+    text-align: center;
+    padding: 2em;
+    max-width: 50em;
+    margin: 0 auto;
+
+    .home-content
+    {
+        background: white;
+        padding: 2em;
+        border-radius: 1em;
+        box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        max-width: 100%;
+        text-align: center;
+
+        .home-title
+        {
+            font-size: 2em;
+            color: #1e3a8a;
+            margin-bottom: 0.5em;
+        }
+
+        .home-description
+        {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 1.5em;
+            line-height: 1.6;
+        }
+
+        .home-image
+        {
+            width: 100%;
+            max-width: 40em;
+            border-radius: 0.5em;
+            box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.2);
+            margin-top: 1.5em;
+        }
+    }
+}
