@@ -1,5 +1,6 @@
 {
   "title": "Mystique",
   "description": "Répétition",
-  "image": "./logo.jpeg"
+  "image": "./logo.jpeg",
+  "additionalImage": "./background-screen.jpg"
 }
