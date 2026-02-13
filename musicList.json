@@ -70,6 +70,56 @@
     "audio": "heavy_Cross.mp3",
     "pdf": "heavy_cross.pdf",
     "genre": "Rock"
+  },
+ {
+    "title": "What Up - 4 Non Blondes",
+    "audio": "4_Non_Blondes_Whats_Up.mp3",
+    "pdf": "part_what_up.pdf",
+    "genre": "Rock"
+  },
+ {
+    "title": "Un Autre Monde - Telephone",
+    "audio": "Telephone_Un_autre_monde.mp3",
+    "pdf": "part_un_autre_monde.pdf",
+    "genre": "Rock"
+  },
+ {
+    "title": "So What - Pink",
+    "audio": "Pink_So_What.mp3",
+    "pdf": "part_pink_so_what.pdf",
+    "genre": "Rock"
+  },
+ {
+    "title": "The Outfield Your Love",
+    "audio": "The_Outfield_Your_Love.mp3",
+    "pdf": "part_your_love.pdf",
+    "genre": "Rock"
+  },
+ {
+    "title": "Beast of Burden - Bette Milder",
+    "audio": "Bette_Midler_Beast_of_Burden.mp3",
+    "pdf": "part_best_of_burden.pdf",
+    "genre": "Rock"
+  },
+ {
+    "title": "Hit Me With Your Best Shot - Pat Benatar",
+    "audio": "Hit_Me_With_Your_Best _Shot.mp3",
+    "pdf": "part_hit_me_with.pdf",
+    "genre": "Rock"
+  },
+ {
+    "title": "Training season - Dua Lipa",
+    "audio": "Dua_Lipa_Training_Season.mp3",
+    "pdf": "part_training_season.pdf",
+    "genre": "Rock"
+  },
+ {
+    "title": "The Outfield Your Love",
+    "audio": "The_Outfield_Your_Love.mp3",
+    "pdf": "part_your_love.pdf",
+    "genre": "Rock"
   }
+
 ]
+
 
