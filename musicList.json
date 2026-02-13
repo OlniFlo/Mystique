@@ -24,12 +24,6 @@
     "genre": "Pop"
   },
          {
-    "title": "S&M - Rihanna ",
-    "audio": "S&M.mp3",
-    "pdf": "SM_Rihanna.pdf",
-    "genre": "Pop Festif"
-  },
-         {
     "title": "Get Lucky - Live Jukebox",
     "audio": "Get Lucky_JK.mp3",
     "pdf": "Get_Lucky.pdf",
@@ -52,12 +46,6 @@
     "audio": "Radioactive.mp3",
     "pdf": "Radioactive.pdf",
     "genre": "Pop-Rock"
-  },
-{
-    "title": "J'irai ou tu iras (Live)",
-    "audio": "jirai_ou_tu_iras.mp3",
-    "pdf": "jirai_ou_tu_iras.pdf",
-    "genre": "Rock"
   },
   {
     "title": "Highway To Hell - ACDC",
@@ -121,5 +109,6 @@
   }
 
 ]
+
 
 
