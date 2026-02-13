@@ -1,32 +1,14 @@
 [
-  {
-    "title": "September EWF",
-    "audio": "September_EWF.mp3",
-    "pdf": "September_EWF.pdf",
-    "genre": "Funk"
-  },
  {
     "title": "Sugar - Marron 5",
     "audio": "Maroon_5_Sugar.mp3",
     "pdf": "Sugar_Marron_5.pdf",
     "genre": "Funk"
   },
-  {
-    "title": "Until - Stephen Sanchez",
-    "audio": "Stephen Sanchez_Until_I_Found_You_LIVE.mp3",
-    "pdf": "Until_I_Found_You.pdf",
-    "genre": "Chill"
-  },
     {
     "title": "Californication Red Hot",
     "audio": "Californication_Red Hot Chili Peppers.mp3",
     "pdf": "Califonication_Redhot.pdf",
-    "genre": "Rock Classique"
-  },
-    {
-    "title": "Sweet Dreams - Eurythmics",
-    "audio": "Sweet Dreams_Eurythmics.mp3",
-    "pdf": "Sweet Dreams_Eurythmics.pdf",
     "genre": "Rock Classique"
   },
       {
@@ -35,29 +17,11 @@
     "pdf": "Supermodel_Maneskin.pdf",
     "genre": "Rock Classique"
   },
-      {
-    "title": "Bad Girls",
-    "audio": "Bad_Girls.mp3",
-    "pdf": "Bad_Girls.pdf",
-    "genre": "Funk Rock"
-  },
-       {
-    "title": "Treasure",
-    "audio": "Treasure.mp3",
-    "pdf": "Treasure.pdf",
-    "genre": "Pop"
-  },
      {
     "title": "Back to Black",
     "audio": "Back_to_Black.mp3",
     "pdf": "Back_to_black.pdf",
     "genre": "Pop"
-  },
-       {
-    "title": "I Gotta Feeling",
-    "audio": "I Gotta Feeling.mp3",
-    "pdf": "Gotta_Feeling.pdf",
-    "genre": "Pop Festif"
   },
          {
     "title": "S&M - Rihanna ",
@@ -77,36 +41,6 @@
     "pdf": "Beautiful_thing.pdf",
     "genre": "Pop Rock"
   },
-    {
-    "title": "Fireflies - Owl City",
-    "audio": "Fireflies_Live.mp3",
-    "pdf": "Fireflies.pdf",
-    "genre": "Rock"
-  },
-    {
-    "title": "Oh My God - Adele",
-    "audio": "Adele_Oh_My_God.mp3",
-    "pdf": "oh_my_god_adele.pdf",
-    "genre": "Pop"
-  },
-  {
-    "title": "Le Freak - CHIC",
-    "audio": "Le Freak _CHIC.mp3",
-    "pdf": "Freak.pdf",
-    "genre": "Disco-Funk"
-  },
-  {
-    "title": "Fresh - Kool & The Gang",
-    "audio": "Fresh.mp3",
-    "pdf": "Fresh.pdf",
-    "genre": "Disco-Funk"
-  },
-{
-    "title": "This Love - Maroon 5",
-    "audio": "This_Love.mp3",
-    "pdf": "this_love.pdf",
-    "genre": "Pop Rock"
-  },
 {
     "title": "Smells Like Teen Spirit - Nirvana",
     "audio": "Smells.mp3",
@@ -120,46 +54,10 @@
     "genre": "Pop-Rock"
   },
 {
-    "title": "Beggin - Maneskin (Live)",
-    "audio": "Beggin.mp3",
-    "pdf": "Beggin.pdf",
-    "genre": "Rock"
-  },
-{
-    "title": "Kiss - Prince",
-    "audio": "Kiss.mp3",
-    "pdf": "Kiss.pdf",
-    "genre": "Rock"
-  },
-{
     "title": "J'irai ou tu iras (Live)",
     "audio": "jirai_ou_tu_iras.mp3",
     "pdf": "jirai_ou_tu_iras.pdf",
     "genre": "Rock"
-  },
-{
-    "title": "Are You Gonna Go My Way - Lenny Kravitz",
-    "audio": "Are_you_gonna.mp3",
-    "pdf": "are_you_gonna.pdf",
-    "genre": "Rock"
-  },
-{
-    "title": "Celebration - Kool & The Gang",
-    "audio": "Celebration.mp3",
-    "pdf": "celebration.pdf",
-    "genre": "Funk-Disco"
-  },
-  {
-    "title": "We Found Love - Rihanna",
-    "audio": "We_Found_Love.mp3",
-    "pdf": "we_found_love.pdf",
-    "genre": "Pop"
-  },
-  {
-    "title": "A sky Full Of Stars - ColdPlay",
-    "audio": "full_of_stars.mp3",
-    "pdf": "a_sky_full_of_stars.pdf",
-    "genre": "Pop Rock"
   },
   {
     "title": "Highway To Hell - ACDC",
@@ -172,56 +70,6 @@
     "audio": "heavy_Cross.mp3",
     "pdf": "heavy_cross.pdf",
     "genre": "Rock"
-  },
-  {
-    "title": "Adventure of a lifetime - ColdPlay",
-    "audio": "adventure.mp3",
-    "pdf": "adventure.pdf",
-    "genre": "Pop Rock"
-  },
-  {
-    "title": "Stand By Me - Ben E.King",
-    "audio": "stand_by_me.mp3",
-    "pdf": "stand_by_me.pdf",
-    "genre": "Saoul"
-  },
-  {
-    "title": "Symphonie des Eclairs - ZAHO",
-    "audio": "symphonie.mp3",
-    "pdf": "symphonie_eclairs.pdf",
-    "genre": "chill"
-  },
-  {
-    "title": "Je marierai un ange - Pierre Maere",
-    "audio": "je_marierai_un_ange.mp3",
-    "pdf": "je_marierai_un_ange.pdf",
-    "genre": "chill"
-  },
-  {
-    "title": "J'ai demandé a la lune - Indochine",
-    "audio": "demandé_a_la_lune.mp3",
-    "pdf": "demandé_a_la_lune.pdf",
-    "genre": "chill"
-  },
-   {
-    "title": "Gossip - Maneskin",
-    "audio": "Måneskin_Gossip.mp3",
-    "pdf": "Gossip__Maneskin.pdf",
-    "genre": "Rock"
-  },
-  {
-    "title": "Sex On Fire - Beyoncé (Live)",
-    "audio": "Sex_on_Fire.mp3",
-    "pdf": "sex_on_fire.pdf",
-    "genre": "Pop Rock"
-  },
-   {
-    "title": "Love at First Sight - Kylie M",
-    "audio": "Love_at_first.mp3",
-    "pdf": "Love_at_first_sight.pdf",
-    "genre": "Pop"
   }
-
-  
-  
 ]
+
